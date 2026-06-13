@@ -23,7 +23,10 @@ let tousLesData;
 
 // Charger le GeoJSON
 fetch('monuments.geojson')
-  .then(data => {
+  .then(res => res.text())
+  .then(text => {
+    const clean = text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+    const data = JSON.parse(clean);
     tousLesData = data;
     afficher(data);
   });
