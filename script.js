@@ -22,8 +22,7 @@ let coucheMonuments;
 let tousLesData;
 
 // Charger le GeoJSON
-fetch('data/monuments.geojson')
-  .then(res => res.json())
+fetch('monuments.geojson')
   .then(data => {
     tousLesData = data;
     afficher(data);
