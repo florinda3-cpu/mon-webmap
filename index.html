@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Monuments historiques — Hauts-de-France</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="titre">🏛 Monuments historiques — Hauts-de-France</div>
+  <div id="filtre">
+  <label><input type="checkbox" value="classement" checked onchange="filtrer()"> 🔴 Classé MH</label>
+  <label><input type="checkbox" value="inscrit" checked onchange="filtrer()"> 🔵 Inscrit MH</label>
+  <label><input type="checkbox" value="mixte" checked onchange="filtrer()"> 🟠 Partiellement Classé-Inscrit</label>
+</div>
+  <div id="carte"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<div id="recherche">
+  <input type="text" id="searchInput" placeholder="🔍 Rechercher un monument ou une commune..." oninput="rechercher()"/>
+</div>
